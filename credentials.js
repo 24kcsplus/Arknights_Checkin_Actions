@@ -9,6 +9,13 @@ let user = {
 // 用户编辑内容结束
 
 const SERVERS = {
+  //B服
+  BILI:{
+    AUTH: '',
+    GAME: 'https://ak-gs-b.hypergryph.com',
+    CONF: 'https://ak-conf.hypergryph.com',
+    VER:  `https://ak-conf.hypergryph.com/config/prod/b/Android/version`
+  },
   // 国服
   CN: {
     AUTH: 'https://as.hypergryph.com',
@@ -39,6 +46,9 @@ const SERVERS = {
 }
 
 switch (user.server) {
+  case 'BILI':
+    user.server = SERVERS.BILI
+    break
   case 'CN':
     user.server = SERVERS.CN
     break
